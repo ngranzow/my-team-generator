@@ -1,0 +1,26 @@
+{
+  "name": "my-team-generator",
+  "version": "1.0.0",
+  "description": "Application taht generates an HTML webpage from information entered about employees",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngranzow/my-team-generator.git"
+  },
+  "author": "Nate Granzow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngranzow/my-team-generator/issues"
+  },
+  "homepage": "https://github.com/ngranzow/my-team-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "jest": "^27.5.1"
+  }
+}
