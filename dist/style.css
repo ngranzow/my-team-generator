@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    background-color: #083640;
+    color: var(--primary)
+}
+
+.title,
+.subtitle {
+    color: white;
+}
+
+.card-header {
+    background-color: #08400c;
+    color: var(--primary);
+    padding-left: 2%;
+    padding-top: 1%;
+}
+

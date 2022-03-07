@@ -12,11 +12,11 @@ function generateCards(teamArr) {
                 cards.push(generateManCard(manager));
                 break;
             case 'Engineer':
-                const engineer = new Engineer(team.name, team.id, team.email, team.officeNumber);
+                const engineer = new Engineer(team.name, team.id, team.email, team.github);
                 cards.push(generateEngCard(engineer));
                 break;
             case 'Intern':
-                const intern = new Intern(team.name, team.id, team.email, team.officeNumber);
+                const intern = new Intern(team.name, team.id, team.email, team.school);
                 cards.push(generateIntCard(intern));
                 break;
         }
@@ -26,17 +26,21 @@ function generateCards(teamArr) {
 
 let generateManCard = (Manager) => {
     return `
-    <div class="card">
-        <div class="card-header">
-            <p class="title">${Manager.getName()}</p>
-            <p class="subtitle"><i class="fa-solid fa-mug-hot"></i> ${Manager.getRole()}</p>
-        </div>
-        <div class="card-content">
-            <ul>
-                <li>ID: ${Manager.getID()}</li>
-                <li>Email: <a href="mailto:${Manager.getEmail()}">${Manager.getEmail()}</a></li>
-                <li>Office Number: ${Manager.getOfficeNumber()}</li>
-            </ul>
+    <div class="column is-3">
+        <div class="card">
+            <div class="card-header">
+                <p class="title is-3">${Manager.getName()}</p>
+            </div>
+            <div class="card-header">
+                <p class="subtitle is-5"><i class="fa-solid fa-mug-hot"></i> ${Manager.getRole()}</p>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>ID: ${Manager.getId()}</li>
+                    <li>Email: <a href="mailto:${Manager.getEmail()}">${Manager.getEmail()}</a></li>
+                    <li>Office Number: ${Manager.getOfficeNumber()}</li>
+                </ul>
+            </div>
         </div>
     </div>
     `
@@ -44,17 +48,21 @@ let generateManCard = (Manager) => {
 
 let generateEngCard = (Engineer) => {
     return `
-    <div class="card">
-        <div class="card-header">
-            <p class="title">${Engineer.getName()}</p>
-            <p class="subtitle"><i class="fa-solid fa-laptop-code"></i> ${Engineer.getRole()}</p>
-        </div>
-        <div class="card-content">
-            <ul>
-                <li>ID: ${Engineer.getID()}</li>
-                <li>Email: <a href="mailto:${Engineer.getEmail()}">${Engineer.getEmail()}</a></li>
-                <li>Office Number: <a href="https://github.com/${Engineer.getGitHub()}">${Engineer.getGitHub()}</a></li>
-            </ul>
+    <div class="column is-3">
+        <div class="card">
+            <div class="card-header">
+                <p class="title is-3">${Engineer.getName()}</p>
+            </div>
+            <div class="card-header">
+                <p class="subtitle is-5"><i class="fa-solid fa-laptop-code"></i> ${Engineer.getRole()}</p>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>ID: ${Engineer.getId()}</li>
+                    <li>Email: <a href="mailto:${Engineer.getEmail()}">${Engineer.getEmail()}</a></li>
+                    <li>GitHub: <a href="https://github.com/${Engineer.getGitHub()}">${Engineer.getGitHub()}</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     `
@@ -62,17 +70,21 @@ let generateEngCard = (Engineer) => {
 
 let generateIntCard = (Intern) => {
     return `
-    <div class="card">
-        <div class="card-header">
-            <p class="title">${Intern.getName()}</p>
-            <p class="subtitle"><i class="fa-solid fa-graduation-cap"></i> ${Intern.getRole()}</p>
-        </div>
-        <div class="card-content">
-            <ul>
-                <li>ID: ${Intern.getID()}</li>
-                <li>Email: <a href="mailto:${Intern.getEmail()}">${Intern.getEmail()}</a></li>
-                <li>Office Number: ${Intern.getSchool()}</li>
-            </ul>
+    <div class="column is-3">
+        <div class="card">
+            <div class="card-header">
+                <p class="title is-3">${Intern.getName()}</p>
+            </div>
+            <div class="card-header">
+                <p class="subtitle is-5"><i class="fa-solid fa-graduation-cap"></i> ${Intern.getRole()}</p>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>ID: ${Intern.getId()}</li>
+                    <li>Email: <a href="mailto:${Intern.getEmail()}">${Intern.getEmail()}</a></li>
+                    <li>School: ${Intern.getSchool()}</li>
+                </ul>
+            </div>
         </div>
     </div>
     `
@@ -88,16 +100,19 @@ function generateHTML(team) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="style.css">
         <title>My Team</title>
     </head>
     <body>
-        <section class="section">
+        <header class="section">
             <div class="container">
-                <h1 class="title">My Team</h1>
+                <h1 class="title is-1">My Team</h1>
             </div>
-        </section>
+        </header>
         <section class="section">
-            ${generateCards(team)}
+            <div class="columns">
+                ${generateCards(team)}
+            </div>
         </section>
     </body>
 </html>
