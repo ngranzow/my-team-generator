@@ -2,6 +2,7 @@ const Manager = require('../lib/Manager');
 const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 
+// function to create cards
 function generateCards(teamArr) {
     let cards = [];
     for(let i = 0; i < teamArr.length; i++) {
@@ -24,6 +25,7 @@ function generateCards(teamArr) {
     return cards.join(``);
 }
 
+// generate manager card
 let generateManCard = (Manager) => {
     return `
     <div class="column is-3">
@@ -46,6 +48,7 @@ let generateManCard = (Manager) => {
     `
 }
 
+// generate engineer card
 let generateEngCard = (Engineer) => {
     return `
     <div class="column is-3">
@@ -68,6 +71,7 @@ let generateEngCard = (Engineer) => {
     `
 }
 
+// generate intern card
 let generateIntCard = (Intern) => {
     return `
     <div class="column is-3">
@@ -90,6 +94,7 @@ let generateIntCard = (Intern) => {
     `
 }
 
+// function to generate html page
 function generateHTML(team) {
     return `
     <!DOCTYPE html>

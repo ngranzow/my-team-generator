@@ -7,6 +7,7 @@ const generateHTML = require('./src/generateHTML');
 
 const teamArr = [];
 
+// manager prompt
 const addManager = () => {
     inquirer.prompt([
         {
@@ -85,6 +86,7 @@ const addManager = () => {
     })
 }
 
+// engineer prompt
 const addEngineer = () => {
     inquirer.prompt([
         {
@@ -163,6 +165,7 @@ const addEngineer = () => {
     })
 }
 
+// intern prompt
 const addIntern = () => {
     inquirer.prompt([
         {
@@ -243,6 +246,7 @@ const addIntern = () => {
 
 addManager();
 
+// function that generates HTML file using fs
 function writeToFile(filename, data) {
     fs.writeFile(filename, data, (err) => {
         if(err) throw err;
