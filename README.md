@@ -22,7 +22,7 @@ The final index.html should look similar to:
 ![Image of website](https://ngranzow.github.io/my-team-generator/assets/images/team-generator.png)
 
 ## License 
-[License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 ## Contributing 
 Please read the [installation](#installation) section.
