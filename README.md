@@ -17,7 +17,7 @@ To install, first clone the repository from GitHub and then install Node. Instal
 
 ## Usage 
 Run `node index` in your command line and answer the questions.
-You can also view a video walkthrough [here]().
+You can also view a video walkthrough [here](https://youtu.be/_B40mqBFPuo).
 The final index.html should look similar to:
 ![Image of website](https://ngranzow.github.io/my-team-generator/assets/images/team-generator.png)
 
