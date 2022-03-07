@@ -34,7 +34,7 @@ let generateManCard = (Manager) => {
         <div class="card-content">
             <ul>
                 <li>ID: ${Manager.getID()}</li>
-                <li>Email: ${Manager.getEmail()}</li>
+                <li>Email: <a href="mailto:${Manager.getEmail()}">${Manager.getEmail()}</a></li>
                 <li>Office Number: ${Manager.getOfficeNumber()}</li>
             </ul>
         </div>
@@ -52,15 +52,15 @@ let generateEngCard = (Engineer) => {
         <div class="card-content">
             <ul>
                 <li>ID: ${Engineer.getID()}</li>
-                <li>Email: ${Engineer.getEmail()}</li>
-                <li>Office Number: ${Engineer.getGitHub()}</li>
+                <li>Email: <a href="mailto:${Engineer.getEmail()}">${Engineer.getEmail()}</a></li>
+                <li>Office Number: <a href="https://github.com/${Engineer.getGitHub()}">${Engineer.getGitHub()}</a></li>
             </ul>
         </div>
     </div>
     `
 }
 
-let generateManCard = (Intern) => {
+let generateIntCard = (Intern) => {
     return `
     <div class="card">
         <div class="card-header">
@@ -70,7 +70,7 @@ let generateManCard = (Intern) => {
         <div class="card-content">
             <ul>
                 <li>ID: ${Intern.getID()}</li>
-                <li>Email: ${Intern.getEmail()}</li>
+                <li>Email: <a href="mailto:${Intern.getEmail()}">${Intern.getEmail()}</a></li>
                 <li>Office Number: ${Intern.getSchool()}</li>
             </ul>
         </div>
